@@ -767,6 +767,79 @@ footer {
   }
 }
 
+/* Metrics Dashboard */
+.metrics-section {
+  background: linear-gradient(135deg, rgba(57, 227, 189, 0.08), rgba(96, 165, 250, 0.05));
+  border-top: 1px solid rgba(57, 227, 189, 0.2);
+  border-bottom: 1px solid rgba(57, 227, 189, 0.2);
+  padding: 70px 0;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 16px;
+  background: rgba(14, 29, 48, 0.4);
+  border: 1px solid rgba(57, 227, 189, 0.15);
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  border-color: rgba(57, 227, 189, 0.4);
+  background: rgba(14, 29, 48, 0.6);
+  transform: translateY(-4px);
+}
+
+.metric-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.metric-label {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.metric-desc {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+/* Project Metrics */
+.project-metrics {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(57, 227, 189, 0.15);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.project-metrics strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Active Navigation */
+.nav-links > a.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 2px;
+}
+
 @media (max-width: 980px) {
   .nav-links {
     position: fixed;
@@ -817,6 +890,10 @@ footer {
   .about-grid,
   .contact-card {
     grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .projects-grid {
@@ -871,6 +948,7 @@ footer {
 
   .quality-grid,
   .skills-grid,
+  .metrics-grid,
   .projects-grid,
   .experience-grid,
   .certificate-grid {
